@@ -13,13 +13,18 @@ createApp({
                 "programmare",
             ],
 
-
+            isHidden: false
         }
     },
     methods: {
         aggiungiVocie() {
             let item = document.getElementById("campo").value
             this.toDoList.push(item)
+            item = ''
+        },
+
+        rimuoviVocie(item) {
+            this.toDoList.splice(item, 1)
         }
     }
 }).mount('#app')
