@@ -23,8 +23,12 @@ createApp({
             item = ''
         },
 
-        rimuoviVocie(item) {
-            this.toDoList.splice(item, 1)
+        rimuoviVocie() {
+            for (let i = 0; i < this.toDoList.length; i++) {
+                // const element = this.toDoList[i];
+
+                this.toDoList.splice(i, 1)
+            }
         }
     }
 }).mount('#app')
